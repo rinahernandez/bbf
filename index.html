@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFF Day</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        .flower {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy BFF Day! 🎉</h1>
+    <div class="flower">
+        <pre>
+         _ _
+       _{ ' }_
+     { `.!.` }
+      ',_/Y\\_,'
+        {_,_}
+        </pre>
+    </div>
+    <div id="message"></div>
+    <button onclick="celebrateBFFDay()">Celebrate BFF Day</button>
+    <script>
+        function celebrateBFFDay() {
+            const today = new Date();
+            const isBFFDay = today.getMonth() === 5 && today.getDate() === 8;
+            if (isBFFDay) {
+                const bestFriendName = prompt("Enter your name:");
+                if (bestFriendName) {
+                    document.getElementById("message").innerText = `Hey ${bestFriendName}, Tadaaaaaa!! Happy BFF Day! 💖`;
+                }
+            } else {
+                alert("Today is not BFF Day. BFF Day is celebrated on June 8th.");
+            }
+        }
+    </script>
+</body>
+</html>
